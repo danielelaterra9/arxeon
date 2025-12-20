@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, Info } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { sectors, geoAreas, channels, objectives, budgets } from '../data/mock';
 import { Checkbox } from '../components/ui/checkbox';
 import {
@@ -119,7 +119,7 @@ const Valutazione = () => {
               Valutazione gratuita<br />del tuo marketing
             </h1>
             <p className="text-[#9a9a96] text-lg leading-relaxed">
-              Prima di investire, capisci cosa funziona e cosa no.
+              Prima di investire tempo o budget, capisci cosa funziona davvero e cosa no.
             </p>
           </div>
         </div>
@@ -132,7 +132,8 @@ const Valutazione = () => {
             <h2 className="text-white font-bold text-2xl mb-6">Perché offriamo una valutazione gratuita</h2>
             <p className="text-[#9a9a96] leading-relaxed">
               Scegliere un servizio marketing senza chiarezza è rischioso.<br />
-              La valutazione serve a darti una prima diagnosi reale, non una promessa.
+              La valutazione serve a fornire una prima analisi oggettiva della situazione, 
+              per aiutarti a capire se e come intervenire.
             </p>
           </div>
         </div>
@@ -153,8 +154,8 @@ const Valutazione = () => {
                     1
                   </div>
                   <div className="pt-2">
-                    <h3 className="text-white font-semibold text-lg mb-2">Compili il questionario</h3>
-                    <p className="text-[#9a9a96]">Rispondi a poche domande mirate sulla tua situazione attuale.</p>
+                    <h3 className="text-white font-semibold text-lg mb-2">Compili un questionario guidato</h3>
+                    <p className="text-[#9a9a96]">Rispondi a domande mirate sulla tua situazione attuale.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-8">
@@ -162,8 +163,8 @@ const Valutazione = () => {
                     2
                   </div>
                   <div className="pt-2">
-                    <h3 className="text-white font-semibold text-lg mb-2">Analizziamo la tua situazione</h3>
-                    <p className="text-[#9a9a96]">Studiamo le informazioni e identifichiamo opportunità e criticità.</p>
+                    <h3 className="text-white font-semibold text-lg mb-2">Analizziamo le informazioni fornite</h3>
+                    <p className="text-[#9a9a96]">Studiamo i dati e identifichiamo opportunità e criticità.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-8">
@@ -171,7 +172,7 @@ const Valutazione = () => {
                     3
                   </div>
                   <div className="pt-2">
-                    <h3 className="text-white font-semibold text-lg mb-2">Ricevi un report chiaro via email</h3>
+                    <h3 className="text-white font-semibold text-lg mb-2">Ricevi un report sintetico via email</h3>
                     <p className="text-[#9a9a96]">Entro 48 ore ricevi la valutazione con raccomandazioni concrete.</p>
                   </div>
                 </div>
@@ -181,16 +182,16 @@ const Valutazione = () => {
         </div>
       </section>
 
-      {/* COSA OTTIENI / COSA NON È */}
+      {/* COSA OTTIENI / COSA NON È / A CHI È UTILE */}
       <section className="py-16 bg-[#1f211f]">
         <div className="max-w-[1400px] mx-auto px-5 md:px-10">
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
             <div>
               <h3 className="text-white font-bold text-xl mb-6">Cosa ottieni</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#c8f000] mt-2.5 flex-shrink-0"></span>
-                  <span className="text-[#9a9a96]">Analisi personalizzata della tua situazione</span>
+                  <span className="text-[#9a9a96]">Una lettura esterna e professionale</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#c8f000] mt-2.5 flex-shrink-0"></span>
@@ -198,24 +199,46 @@ const Valutazione = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#c8f000] mt-2.5 flex-shrink-0"></span>
-                  <span className="text-[#9a9a96]">Indicazione del pacchetto più adatto</span>
+                  <span className="text-[#9a9a96]">Maggiore chiarezza sulle priorità</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c8f000] mt-2.5 flex-shrink-0"></span>
+                  <span className="text-[#9a9a96]">Indicazione del pacchetto più adatto (se pertinente)</span>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-white font-bold text-xl mb-6">Cosa non è</h3>
+              <h3 className="text-white font-bold text-xl mb-6">Cosa non è questa valutazione</h3>
               <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#6f716d] mt-2.5 flex-shrink-0"></span>
+                  <span className="text-[#6f716d]">Non è una consulenza strategica completa</span>
+                </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#6f716d] mt-2.5 flex-shrink-0"></span>
                   <span className="text-[#6f716d]">Non è una call di vendita</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#6f716d] mt-2.5 flex-shrink-0"></span>
-                  <span className="text-[#6f716d]">Non è un preventivo forzato</span>
+                  <span className="text-[#6f716d]">Non comporta obblighi o vincoli</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-white font-bold text-xl mb-6">A chi è utile</h3>
+              <p className="text-[#9a9a96] mb-4">La valutazione è utile se vuoi:</p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c8f000] mt-2.5 flex-shrink-0"></span>
+                  <span className="text-[#9a9a96]">capire se il tuo marketing è coerente</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#6f716d] mt-2.5 flex-shrink-0"></span>
-                  <span className="text-[#6f716d]">Non comporta obblighi</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c8f000] mt-2.5 flex-shrink-0"></span>
+                  <span className="text-[#9a9a96]">evitare sprechi</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c8f000] mt-2.5 flex-shrink-0"></span>
+                  <span className="text-[#9a9a96]">prendere decisioni più consapevoli</span>
                 </li>
               </ul>
             </div>
@@ -483,6 +506,9 @@ const Valutazione = () => {
                     </>
                   )}
                 </button>
+                <p className="text-[#6f716d] text-sm text-center mt-4">
+                  Le richieste vengono valutate manualmente.
+                </p>
               </div>
             </form>
           </div>
