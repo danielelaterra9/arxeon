@@ -117,12 +117,12 @@ const Valutazione = () => {
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="py-16 bg-[#1a1c1b]">
+      <section className="py-16 bg-[#161716]">
         <div className="max-w-[1400px] mx-auto px-5 md:px-10">
           <div className="max-w-3xl">
-            <span className="caption text-[#d9fb06] mb-4 block">Valutazione Gratuita</span>
-            <h1 className="heading-1 mb-6">Analisi gratuita<br />del tuo marketing</h1>
-            <p className="body-large">
+            <span className="text-[#9a9a96] text-sm uppercase tracking-wider mb-4 block">Valutazione Gratuita</span>
+            <h1 className="text-[#c8f000] font-bold text-4xl md:text-5xl leading-tight mb-6">Analisi gratuita<br />del tuo marketing</h1>
+            <p className="text-[#9a9a96] text-lg leading-relaxed">
               Compila il form e riceverai un report personalizzato con opportunità 
               e raccomandazioni concrete per il tuo business. Nessun impegno.
             </p>
@@ -131,27 +131,27 @@ const Valutazione = () => {
       </section>
 
       {/* Form Section */}
-      <section className="py-16 bg-[#1a1c1b]">
+      <section className="py-16 bg-[#161716]">
         <div className="max-w-[1400px] mx-auto px-5 md:px-10">
           <div className="grid lg:grid-cols-3 gap-16">
             {/* Form */}
             <div className="lg:col-span-2">
               <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Personal Info */}
-                <div className="bg-[#302f2c] p-8 rounded-xl border border-[#3f4816]">
+                <div className="bg-[#2a2c29] p-8 rounded-xl border border-[#343633]">
                   <h3 className="text-xl font-bold text-white mb-6">Informazioni di contatto</h3>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-white text-sm font-medium mb-2">
-                        Nome e Cognome <span className="text-[#d9fb06]">*</span>
+                        Nome e Cognome <span className="text-[#c8f000]">*</span>
                       </label>
                       <input
                         type="text"
                         name="fullName"
                         value={formData.fullName}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 bg-[#1a1c1b] border rounded-lg text-white placeholder-[#888680] focus:outline-none focus:border-[#d9fb06] transition-colors ${
-                          errors.fullName ? 'border-red-500' : 'border-[#3f4816]'
+                        className={`w-full px-4 py-3 bg-[#161716] border rounded-lg text-white placeholder-[#6f716d] focus:outline-none focus:border-[#c8f000] transition-colors ${
+                          errors.fullName ? 'border-red-500' : 'border-[#343633]'
                         }`}
                         placeholder="Mario Rossi"
                       />
@@ -159,15 +159,15 @@ const Valutazione = () => {
                     </div>
                     <div>
                       <label className="block text-white text-sm font-medium mb-2">
-                        Email <span className="text-[#d9fb06]">*</span>
+                        Email <span className="text-[#c8f000]">*</span>
                       </label>
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 bg-[#1a1c1b] border rounded-lg text-white placeholder-[#888680] focus:outline-none focus:border-[#d9fb06] transition-colors ${
-                          errors.email ? 'border-red-500' : 'border-[#3f4816]'
+                        className={`w-full px-4 py-3 bg-[#161716] border rounded-lg text-white placeholder-[#6f716d] focus:outline-none focus:border-[#c8f000] transition-colors ${
+                          errors.email ? 'border-red-500' : 'border-[#343633]'
                         }`}
                         placeholder="mario@azienda.ch"
                       />
@@ -175,14 +175,14 @@ const Valutazione = () => {
                     </div>
                     <div>
                       <label className="block text-white text-sm font-medium mb-2">
-                        Telefono <span className="text-[#888680] text-xs">(opzionale)</span>
+                        Telefono <span className="text-[#6f716d] text-xs">(opzionale)</span>
                       </label>
                       <input
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-[#1a1c1b] border border-[#3f4816] rounded-lg text-white placeholder-[#888680] focus:outline-none focus:border-[#d9fb06] transition-colors"
+                        className="w-full px-4 py-3 bg-[#161716] border border-[#343633] rounded-lg text-white placeholder-[#6f716d] focus:outline-none focus:border-[#c8f000] transition-colors"
                         placeholder="+41 00 000 00 00"
                       />
                     </div>
@@ -190,20 +190,20 @@ const Valutazione = () => {
                 </div>
 
                 {/* Company Info */}
-                <div className="bg-[#302f2c] p-8 rounded-xl border border-[#3f4816]">
+                <div className="bg-[#2a2c29] p-8 rounded-xl border border-[#343633]">
                   <h3 className="text-xl font-bold text-white mb-6">Informazioni aziendali</h3>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-white text-sm font-medium mb-2">
-                        Nome Azienda / Brand <span className="text-[#d9fb06]">*</span>
+                        Nome Azienda / Brand <span className="text-[#c8f000]">*</span>
                       </label>
                       <input
                         type="text"
                         name="companyName"
                         value={formData.companyName}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 bg-[#1a1c1b] border rounded-lg text-white placeholder-[#888680] focus:outline-none focus:border-[#d9fb06] transition-colors ${
-                          errors.companyName ? 'border-red-500' : 'border-[#3f4816]'
+                        className={`w-full px-4 py-3 bg-[#161716] border rounded-lg text-white placeholder-[#6f716d] focus:outline-none focus:border-[#c8f000] transition-colors ${
+                          errors.companyName ? 'border-red-500' : 'border-[#343633]'
                         }`}
                         placeholder="La tua azienda SA"
                       />
@@ -211,30 +211,30 @@ const Valutazione = () => {
                     </div>
                     <div>
                       <label className="block text-white text-sm font-medium mb-2">
-                        Sito web <span className="text-[#888680] text-xs">(opzionale)</span>
+                        Sito web <span className="text-[#6f716d] text-xs">(opzionale)</span>
                       </label>
                       <input
                         type="url"
                         name="website"
                         value={formData.website}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-[#1a1c1b] border border-[#3f4816] rounded-lg text-white placeholder-[#888680] focus:outline-none focus:border-[#d9fb06] transition-colors"
+                        className="w-full px-4 py-3 bg-[#161716] border border-[#343633] rounded-lg text-white placeholder-[#6f716d] focus:outline-none focus:border-[#c8f000] transition-colors"
                         placeholder="https://www.tuosito.ch"
                       />
                     </div>
                     <div>
                       <label className="block text-white text-sm font-medium mb-2">
-                        Settore <span className="text-[#d9fb06]">*</span>
+                        Settore <span className="text-[#c8f000]">*</span>
                       </label>
                       <Select value={formData.sector} onValueChange={(value) => handleSelectChange('sector', value)}>
-                        <SelectTrigger className={`w-full px-4 py-3 h-auto bg-[#1a1c1b] border rounded-lg text-white focus:ring-0 focus:ring-offset-0 ${
-                          errors.sector ? 'border-red-500' : 'border-[#3f4816]'
+                        <SelectTrigger className={`w-full px-4 py-3 h-auto bg-[#161716] border rounded-lg text-white focus:ring-0 focus:ring-offset-0 ${
+                          errors.sector ? 'border-red-500' : 'border-[#343633]'
                         }`}>
                           <SelectValue placeholder="Seleziona il settore" />
                         </SelectTrigger>
-                        <SelectContent className="bg-[#302f2c] border-[#3f4816]">
+                        <SelectContent className="bg-[#2a2c29] border-[#343633]">
                           {sectors.map((sector) => (
-                            <SelectItem key={sector} value={sector} className="text-white hover:bg-[#3f4816] focus:bg-[#3f4816] focus:text-[#d9fb06]">
+                            <SelectItem key={sector} value={sector} className="text-white hover:bg-[#343633] focus:bg-[#343633] focus:text-[#c8f000]">
                               {sector}
                             </SelectItem>
                           ))}
@@ -244,17 +244,17 @@ const Valutazione = () => {
                     </div>
                     <div>
                       <label className="block text-white text-sm font-medium mb-2">
-                        Area geografica <span className="text-[#d9fb06]">*</span>
+                        Area geografica <span className="text-[#c8f000]">*</span>
                       </label>
                       <Select value={formData.geoArea} onValueChange={(value) => handleSelectChange('geoArea', value)}>
-                        <SelectTrigger className={`w-full px-4 py-3 h-auto bg-[#1a1c1b] border rounded-lg text-white focus:ring-0 focus:ring-offset-0 ${
-                          errors.geoArea ? 'border-red-500' : 'border-[#3f4816]'
+                        <SelectTrigger className={`w-full px-4 py-3 h-auto bg-[#161716] border rounded-lg text-white focus:ring-0 focus:ring-offset-0 ${
+                          errors.geoArea ? 'border-red-500' : 'border-[#343633]'
                         }`}>
                           <SelectValue placeholder="Seleziona l'area" />
                         </SelectTrigger>
-                        <SelectContent className="bg-[#302f2c] border-[#3f4816]">
+                        <SelectContent className="bg-[#2a2c29] border-[#343633]">
                           {geoAreas.map((area) => (
-                            <SelectItem key={area} value={area} className="text-white hover:bg-[#3f4816] focus:bg-[#3f4816] focus:text-[#d9fb06]">
+                            <SelectItem key={area} value={area} className="text-white hover:bg-[#343633] focus:bg-[#343633] focus:text-[#c8f000]">
                               {area}
                             </SelectItem>
                           ))}
@@ -266,12 +266,12 @@ const Valutazione = () => {
                 </div>
 
                 {/* Marketing Info */}
-                <div className="bg-[#302f2c] p-8 rounded-xl border border-[#3f4816]">
+                <div className="bg-[#2a2c29] p-8 rounded-xl border border-[#343633]">
                   <h3 className="text-xl font-bold text-white mb-6">Il tuo marketing attuale</h3>
                   <div className="space-y-6">
                     <div>
                       <label className="block text-white text-sm font-medium mb-4">
-                        Canali attualmente utilizzati <span className="text-[#d9fb06]">*</span>
+                        Canali attualmente utilizzati <span className="text-[#c8f000]">*</span>
                       </label>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                         {channels.map((channel) => (
@@ -281,8 +281,8 @@ const Valutazione = () => {
                             onClick={() => handleChannelToggle(channel.id)}
                             className={`px-4 py-3 rounded-lg border text-sm font-medium transition-all ${
                               formData.channels.includes(channel.id)
-                                ? 'bg-[#d9fb06] text-[#1a1c1b] border-[#d9fb06]'
-                                : 'bg-[#1a1c1b] text-[#888680] border-[#3f4816] hover:border-[#d9fb06] hover:text-white'
+                                ? 'bg-[#c8f000] text-[#161716] border-[#c8f000]'
+                                : 'bg-[#161716] text-[#9a9a96] border-[#343633] hover:border-[#c8f000] hover:text-white'
                             }`}
                           >
                             {channel.label}
@@ -294,17 +294,17 @@ const Valutazione = () => {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-white text-sm font-medium mb-2">
-                          Obiettivo principale <span className="text-[#d9fb06]">*</span>
+                          Obiettivo principale <span className="text-[#c8f000]">*</span>
                         </label>
                         <Select value={formData.objective} onValueChange={(value) => handleSelectChange('objective', value)}>
-                          <SelectTrigger className={`w-full px-4 py-3 h-auto bg-[#1a1c1b] border rounded-lg text-white focus:ring-0 focus:ring-offset-0 ${
-                            errors.objective ? 'border-red-500' : 'border-[#3f4816]'
+                          <SelectTrigger className={`w-full px-4 py-3 h-auto bg-[#161716] border rounded-lg text-white focus:ring-0 focus:ring-offset-0 ${
+                            errors.objective ? 'border-red-500' : 'border-[#343633]'
                           }`}>
                             <SelectValue placeholder="Cosa vuoi ottenere?" />
                           </SelectTrigger>
-                          <SelectContent className="bg-[#302f2c] border-[#3f4816]">
+                          <SelectContent className="bg-[#2a2c29] border-[#343633]">
                             {objectives.map((obj) => (
-                              <SelectItem key={obj} value={obj} className="text-white hover:bg-[#3f4816] focus:bg-[#3f4816] focus:text-[#d9fb06]">
+                              <SelectItem key={obj} value={obj} className="text-white hover:bg-[#343633] focus:bg-[#343633] focus:text-[#c8f000]">
                                 {obj}
                               </SelectItem>
                             ))}
@@ -314,17 +314,17 @@ const Valutazione = () => {
                       </div>
                       <div>
                         <label className="block text-white text-sm font-medium mb-2">
-                          Budget marketing mensile <span className="text-[#d9fb06]">*</span>
+                          Budget marketing mensile <span className="text-[#c8f000]">*</span>
                         </label>
                         <Select value={formData.budget} onValueChange={(value) => handleSelectChange('budget', value)}>
-                          <SelectTrigger className={`w-full px-4 py-3 h-auto bg-[#1a1c1b] border rounded-lg text-white focus:ring-0 focus:ring-offset-0 ${
-                            errors.budget ? 'border-red-500' : 'border-[#3f4816]'
+                          <SelectTrigger className={`w-full px-4 py-3 h-auto bg-[#161716] border rounded-lg text-white focus:ring-0 focus:ring-offset-0 ${
+                            errors.budget ? 'border-red-500' : 'border-[#343633]'
                           }`}>
                             <SelectValue placeholder="Seleziona il budget" />
                           </SelectTrigger>
-                          <SelectContent className="bg-[#302f2c] border-[#3f4816]">
+                          <SelectContent className="bg-[#2a2c29] border-[#343633]">
                             {budgets.map((budget) => (
-                              <SelectItem key={budget} value={budget} className="text-white hover:bg-[#3f4816] focus:bg-[#3f4816] focus:text-[#d9fb06]">
+                              <SelectItem key={budget} value={budget} className="text-white hover:bg-[#343633] focus:bg-[#343633] focus:text-[#c8f000]">
                                 {budget}
                               </SelectItem>
                             ))}
@@ -335,15 +335,15 @@ const Valutazione = () => {
                     </div>
                     <div>
                       <label className="block text-white text-sm font-medium mb-2">
-                        Qual è il tuo problema principale? <span className="text-[#d9fb06]">*</span>
+                        Qual è il tuo problema principale? <span className="text-[#c8f000]">*</span>
                       </label>
                       <textarea
                         name="mainProblem"
                         value={formData.mainProblem}
                         onChange={handleInputChange}
                         rows={4}
-                        className={`w-full px-4 py-3 bg-[#1a1c1b] border rounded-lg text-white placeholder-[#888680] focus:outline-none focus:border-[#d9fb06] transition-colors resize-none ${
-                          errors.mainProblem ? 'border-red-500' : 'border-[#3f4816]'
+                        className={`w-full px-4 py-3 bg-[#161716] border rounded-lg text-white placeholder-[#6f716d] focus:outline-none focus:border-[#c8f000] transition-colors resize-none ${
+                          errors.mainProblem ? 'border-red-500' : 'border-[#343633]'
                         }`}
                         placeholder="Descrivi brevemente la sfida principale che vorresti affrontare con il marketing..."
                       />
@@ -353,20 +353,20 @@ const Valutazione = () => {
                 </div>
 
                 {/* Privacy & Submit */}
-                <div className="bg-[#302f2c] p-8 rounded-xl border border-[#3f4816]">
+                <div className="bg-[#2a2c29] p-8 rounded-xl border border-[#343633]">
                   <div className="flex items-start gap-3 mb-6">
                     <Checkbox
                       id="privacy"
                       checked={formData.privacyConsent}
                       onCheckedChange={handleCheckboxChange}
-                      className={`mt-1 border-[#3f4816] data-[state=checked]:bg-[#d9fb06] data-[state=checked]:border-[#d9fb06] ${
+                      className={`mt-1 border-[#343633] data-[state=checked]:bg-[#c8f000] data-[state=checked]:border-[#c8f000] ${
                         errors.privacyConsent ? 'border-red-500' : ''
                       }`}
                     />
-                    <label htmlFor="privacy" className="text-[#888680] text-sm leading-relaxed cursor-pointer">
+                    <label htmlFor="privacy" className="text-[#9a9a96] text-sm leading-relaxed cursor-pointer">
                       Acconsento al trattamento dei miei dati personali secondo la{' '}
-                      <a href="/privacy" className="text-[#d9fb06] hover:underline">Privacy Policy</a>{' '}
-                      e accetto di essere ricontattato dal team Arxéon per la valutazione richiesta. <span className="text-[#d9fb06]">*</span>
+                      <a href="/privacy" className="text-[#c8f000] hover:underline">Privacy Policy</a>{' '}
+                      e accetto di essere ricontattato dal team Arxéon per la valutazione richiesta. <span className="text-[#c8f000]">*</span>
                     </label>
                   </div>
                   {errors.privacyConsent && <p className="text-red-500 text-sm mb-4">{errors.privacyConsent}</p>}
@@ -397,54 +397,54 @@ const Valutazione = () => {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
-                <div className="bg-[#3f4816] p-8 rounded-xl">
+                <div className="bg-[#343633] p-8 rounded-xl">
                   <h3 className="text-xl font-bold text-white mb-4">Cosa riceverai</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-[#d9fb06] flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-[#1a1c1b] text-sm font-bold">1</span>
+                      <div className="w-6 h-6 rounded-full bg-[#c8f000] flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-[#161716] text-sm font-bold">1</span>
                       </div>
-                      <span className="text-[#888680]">Analisi della tua situazione attuale</span>
+                      <span className="text-[#9a9a96]">Analisi della tua situazione attuale</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-[#d9fb06] flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-[#1a1c1b] text-sm font-bold">2</span>
+                      <div className="w-6 h-6 rounded-full bg-[#c8f000] flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-[#161716] text-sm font-bold">2</span>
                       </div>
-                      <span className="text-[#888680]">Identificazione delle opportunità</span>
+                      <span className="text-[#9a9a96]">Identificazione delle opportunità</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-[#d9fb06] flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-[#1a1c1b] text-sm font-bold">3</span>
+                      <div className="w-6 h-6 rounded-full bg-[#c8f000] flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-[#161716] text-sm font-bold">3</span>
                       </div>
-                      <span className="text-[#888680]">Raccomandazioni concrete</span>
+                      <span className="text-[#9a9a96]">Raccomandazioni concrete</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-[#d9fb06] flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-[#1a1c1b] text-sm font-bold">4</span>
+                      <div className="w-6 h-6 rounded-full bg-[#c8f000] flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-[#161716] text-sm font-bold">4</span>
                       </div>
-                      <span className="text-[#888680]">Proposta del pacchetto ideale</span>
+                      <span className="text-[#9a9a96]">Proposta del pacchetto ideale</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="bg-[#302f2c] p-8 rounded-xl border border-[#3f4816]">
+                <div className="bg-[#2a2c29] p-8 rounded-xl border border-[#343633]">
                   <div className="flex items-start gap-3 mb-4">
-                    <Info className="text-[#d9fb06] flex-shrink-0 mt-0.5" size={20} />
+                    <Info className="text-[#c8f000] flex-shrink-0 mt-0.5" size={20} />
                     <h4 className="text-white font-semibold">Nessun impegno</h4>
                   </div>
-                  <p className="text-[#888680] text-sm">
+                  <p className="text-[#9a9a96] text-sm">
                     La valutazione è completamente gratuita e senza impegno. 
                     Riceverai il report via email entro 48 ore lavorative.
                   </p>
                 </div>
 
-                <div className="bg-[#302f2c] p-8 rounded-xl border border-[#3f4816]">
-                  <p className="text-[#888680] text-sm mb-4">
+                <div className="bg-[#2a2c29] p-8 rounded-xl border border-[#343633]">
+                  <p className="text-[#9a9a96] text-sm mb-4">
                     "La valutazione mi ha aperto gli occhi su opportunità che non avevo considerato."
                   </p>
                   <div>
-                    <p className="text-[#d9fb06] font-semibold text-sm">Sara T.</p>
-                    <p className="text-[#888680] text-xs">E-commerce Fashion</p>
+                    <p className="text-[#c8f000] font-semibold text-sm">Sara T.</p>
+                    <p className="text-[#6f716d] text-xs">E-commerce Fashion</p>
                   </div>
                 </div>
               </div>
