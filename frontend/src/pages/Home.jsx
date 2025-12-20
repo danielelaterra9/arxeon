@@ -1,187 +1,210 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Check, TrendingUp, Users, Target, Zap } from 'lucide-react';
-import { stats, testimonials } from '../data/mock';
+import { ArrowRight } from 'lucide-react';
 
 const Home = () => {
   return (
     <main className="pt-20">
-      {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center bg-[#1a1c1b] relative overflow-hidden">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#d9fb06] blur-[150px]" />
-          <div className="absolute bottom-20 left-20 w-64 h-64 rounded-full bg-[#3f4816] blur-[100px]" />
-        </div>
-        
-        <div className="max-w-[1400px] mx-auto px-5 md:px-10 py-20 relative z-10">
+      {/* SEZIONE 1 – HERO */}
+      <section className="min-h-[calc(100vh-80px)] flex items-center bg-[#1a1c1b] relative">
+        <div className="max-w-[1400px] mx-auto px-5 md:px-10 py-20 w-full">
           <div className="max-w-4xl">
-            <span className="caption text-[#d9fb06] mb-6 block">Marketing strategico • Risultati misurabili</span>
-            <h1 className="heading-display mb-8">
-              Il tuo marketing<br />
-              merita risultati,<br />
-              <span className="text-white">non promesse.</span>
+            <h1 className="text-[#d9fb06] font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight mb-8">
+              Marketing che lavora<br />
+              per il tuo business,<br />
+              <span className="text-white">non il contrario.</span>
             </h1>
-            <p className="body-large max-w-2xl mb-10">
-              Trasformiamo i tuoi investimenti marketing in crescita concreta e misurabile. 
-              Strategia, esecuzione e ottimizzazione: tutto orientato al tuo business.
+            <p className="text-[#888680] text-lg md:text-xl leading-relaxed max-w-2xl mb-10">
+              Progettiamo e gestiamo servizi marketing chiari, misurabili e orientati ai risultati, 
+              per professionisti e aziende che vogliono smettere di improvvisare.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-start">
               <Link to="/valutazione" className="btn-primary text-base px-8 py-4">
-                Richiedi valutazione gratuita
+                Ottieni una valutazione gratuita
                 <ArrowRight className="ml-2" size={18} />
               </Link>
-              <Link to="/servizi" className="btn-secondary text-base px-8 py-4">
+              <Link 
+                to="/servizi" 
+                className="text-[#888680] hover:text-[#d9fb06] transition-colors text-base font-medium py-4 px-2 flex items-center gap-2"
+              >
                 Scopri i pacchetti
+                <ArrowRight size={16} />
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="bg-[#302f2c] py-16">
+      {/* SEZIONE 2 – IDENTIFICAZIONE DEL PROBLEMA */}
+      <section className="py-24 bg-[#232523]">
         <div className="max-w-[1400px] mx-auto px-5 md:px-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#d9fb06] mb-2">{stat.value}</div>
-                <div className="text-[#888680] text-sm uppercase tracking-wider">{stat.label}</div>
-              </div>
-            ))}
+          <div className="max-w-3xl">
+            <h2 className="text-[#d9fb06] font-bold text-3xl md:text-4xl leading-tight mb-8">
+              Il problema non è fare marketing.<br />
+              <span className="text-white">È farlo senza controllo.</span>
+            </h2>
+            <p className="text-[#888680] text-lg mb-8">
+              Molti business investono tempo e budget in attività marketing che non portano risultati chiari:
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-start gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#d9fb06] mt-2.5 flex-shrink-0"></span>
+                <span className="text-[#888680] text-lg">social pubblicati senza una strategia reale</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#d9fb06] mt-2.5 flex-shrink-0"></span>
+                <span className="text-[#888680] text-lg">pubblicità che consuma budget senza dati leggibili</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#d9fb06] mt-2.5 flex-shrink-0"></span>
+                <span className="text-[#888680] text-lg">siti web che non generano contatti</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#d9fb06] mt-2.5 flex-shrink-0"></span>
+                <span className="text-[#888680] text-lg">decisioni prese a sensazione</span>
+              </li>
+            </ul>
+            <p className="text-white text-xl font-medium">
+              Il risultato è sempre lo stesso: confusione, spreco e frustrazione.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Problem/Solution Section */}
+      {/* SEZIONE 3 – SOLUZIONE ARXÉON */}
       <section className="py-24 bg-[#1a1c1b]">
         <div className="max-w-[1400px] mx-auto px-5 md:px-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="caption text-[#d9fb06] mb-4 block">Il problema</span>
-              <h2 className="heading-2 mb-6">Stanco di spendere<br />senza vedere risultati?</h2>
-              <div className="space-y-4 text-[#888680]">
-                <p className="flex items-start gap-3">
-                  <span className="text-[#d9fb06] mt-1">•</span>
-                  Budget marketing che svanisce senza ROI chiaro
-                </p>
-                <p className="flex items-start gap-3">
-                  <span className="text-[#d9fb06] mt-1">•</span>
-                  Agenzie che parlano di "engagement" ma non di vendite
-                </p>
-                <p className="flex items-start gap-3">
-                  <span className="text-[#d9fb06] mt-1">•</span>
-                  Strategie generiche che non capiscono il tuo business
-                </p>
-                <p className="flex items-start gap-3">
-                  <span className="text-[#d9fb06] mt-1">•</span>
-                  Report pieni di vanity metrics inutili
-                </p>
-              </div>
-            </div>
-            <div className="bg-[#302f2c] p-8 md:p-12 rounded-lg border border-[#3f4816]">
-              <span className="caption text-[#d9fb06] mb-4 block">La soluzione</span>
-              <h3 className="heading-3 mb-6">Marketing orientato<br />ai risultati reali</h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#3f4816] flex items-center justify-center flex-shrink-0">
-                    <Check className="text-[#d9fb06]" size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold mb-1">KPI chiari e misurabili</h4>
-                    <p className="text-[#888680] text-sm">Definiamo insieme gli obiettivi e li tracciamo con precisione.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#3f4816] flex items-center justify-center flex-shrink-0">
-                    <Check className="text-[#d9fb06]" size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold mb-1">Strategia su misura</h4>
-                    <p className="text-[#888680] text-sm">Niente template: ogni piano è costruito sul tuo business.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#3f4816] flex items-center justify-center flex-shrink-0">
-                    <Check className="text-[#d9fb06]" size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold mb-1">Trasparenza totale</h4>
-                    <p className="text-[#888680] text-sm">Sai sempre dove vanno i tuoi soldi e che risultati portano.</p>
-                  </div>
-                </div>
-              </div>
+          <div className="max-w-3xl">
+            <h2 className="text-[#d9fb06] font-bold text-3xl md:text-4xl leading-tight mb-8">
+              Arxéon rende il marketing<br />
+              uno strumento di lavoro.
+            </h2>
+            <div className="space-y-6">
+              <p className="text-[#888680] text-lg leading-relaxed">
+                Arxéon non aggiunge attività inutili.
+              </p>
+              <p className="text-white text-xl font-medium leading-relaxed">
+                Rende il marketing comprensibile, strutturato e orientato ai risultati.
+              </p>
+              <p className="text-[#888680] text-lg leading-relaxed">
+                Ogni progetto parte da un principio semplice:
+              </p>
+              <p className="text-[#d9fb06] text-xl font-semibold leading-relaxed">
+                il marketing deve aiutare il business a prendere decisioni migliori.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Preview */}
+      {/* SEZIONE 4 – METODO IN 4 STEP */}
       <section className="py-24 bg-[#302f2c]">
         <div className="max-w-[1400px] mx-auto px-5 md:px-10">
-          <div className="text-center mb-16">
-            <span className="caption text-[#d9fb06] mb-4 block">Cosa facciamo</span>
-            <h2 className="heading-2 mb-4">Soluzioni complete<br />per la tua crescita</h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-[#d9fb06] font-bold text-3xl md:text-4xl leading-tight mb-16 max-w-2xl">
+            Un metodo chiaro,<br />
+            applicato a ogni progetto.
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: TrendingUp, title: 'Social Media', desc: 'Gestione professionale dei tuoi canali social' },
-              { icon: Target, title: 'Advertising', desc: 'Campagne Google e Meta Ads ottimizzate' },
-              { icon: Users, title: 'CRM & Email', desc: 'Automazioni e email marketing strategico' },
-              { icon: Zap, title: 'SEO & Content', desc: 'Visibilità organica e contenuti che convertono' },
-            ].map((service, index) => (
-              <div key={index} className="bg-[#1a1c1b] p-8 rounded-lg border border-[#3f4816] hover:border-[#d9fb06] transition-colors group">
-                <div className="w-12 h-12 rounded-lg bg-[#3f4816] flex items-center justify-center mb-6 group-hover:bg-[#d9fb06] transition-colors">
-                  <service.icon className="text-[#d9fb06] group-hover:text-[#1a1c1b] transition-colors" size={24} />
-                </div>
-                <h3 className="text-white font-semibold text-lg mb-2">{service.title}</h3>
-                <p className="text-[#888680] text-sm">{service.desc}</p>
+              { num: '01', title: 'Analisi', desc: 'capiamo cosa funziona e cosa no' },
+              { num: '02', title: 'Strategia', desc: 'definiamo obiettivi realistici' },
+              { num: '03', title: 'Attivazione', desc: 'mettiamo in funzione i servizi giusti' },
+              { num: '04', title: 'Ottimizzazione', desc: 'miglioriamo sulla base dei dati' },
+            ].map((step, index) => (
+              <div key={index} className="relative">
+                <div className="text-5xl font-black text-[#3f4816] mb-4">{step.num}</div>
+                <h3 className="text-white font-bold text-xl mb-2">{step.title}</h3>
+                <p className="text-[#888680]">{step.desc}</p>
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
+        </div>
+      </section>
+
+      {/* SEZIONE 5 – PREVIEW PACCHETTI */}
+      <section className="py-24 bg-[#1a1c1b]">
+        <div className="max-w-[1400px] mx-auto px-5 md:px-10">
+          <div className="text-center mb-16">
+            <h2 className="text-[#d9fb06] font-bold text-3xl md:text-4xl leading-tight mb-4">
+              Tre pacchetti. Una sola logica:
+            </h2>
+            <p className="text-white text-2xl md:text-3xl font-bold mb-6">
+              far funzionare il marketing.
+            </p>
+            <p className="text-[#888680] text-lg">
+              Ogni pacchetto è pensato per una fase diversa del business.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-[#302f2c] p-8 rounded-xl border border-[#3f4816] hover:border-[#d9fb06] transition-colors">
+              <div className="text-[#d9fb06] font-bold text-2xl mb-4">Basic</div>
+              <p className="text-[#888680]">per mettere ordine e basi solide</p>
+            </div>
+            <div className="bg-[#302f2c] p-8 rounded-xl border border-[#d9fb06]">
+              <div className="text-[#d9fb06] font-bold text-2xl mb-4">Premium</div>
+              <p className="text-[#888680]">per continuità e risultati nel tempo</p>
+            </div>
+            <div className="bg-[#302f2c] p-8 rounded-xl border border-[#3f4816] hover:border-[#d9fb06] transition-colors">
+              <div className="text-[#d9fb06] font-bold text-2xl mb-4">Gold</div>
+              <p className="text-[#888680]">per controllo, strategia e visione</p>
+            </div>
+          </div>
+          <div className="text-center">
             <Link to="/servizi" className="btn-secondary">
-              Vedi tutti i pacchetti
+              Confronta i pacchetti
               <ArrowRight className="ml-2" size={16} />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-24 bg-[#1a1c1b]">
+      {/* SEZIONE 6 – VALUTAZIONE GRATUITA */}
+      <section className="py-24 bg-[#232523]">
         <div className="max-w-[1400px] mx-auto px-5 md:px-10">
-          <div className="text-center mb-16">
-            <span className="caption text-[#d9fb06] mb-4 block">Risultati reali</span>
-            <h2 className="heading-2">Cosa dicono i nostri clienti</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-[#302f2c] p-8 rounded-lg border border-[#3f4816]">
-                <div className="inline-block px-3 py-1 bg-[#3f4816] rounded-full text-[#d9fb06] text-sm font-semibold mb-6">
-                  {testimonial.result}
-                </div>
-                <p className="text-white text-lg mb-6 leading-relaxed">"{testimonial.quote}"</p>
-                <div>
-                  <p className="text-[#d9fb06] font-semibold">{testimonial.author}</p>
-                  <p className="text-[#888680] text-sm">{testimonial.role}</p>
-                </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-[#d9fb06] font-bold text-3xl md:text-4xl leading-tight mb-8">
+              Prima di investire,<br />
+              capisci cosa ti serve davvero.
+            </h2>
+            <p className="text-[#888680] text-lg mb-8">
+              Puoi richiedere una valutazione gratuita del tuo marketing:
+            </p>
+            <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12 mb-8 text-left md:text-center">
+              <div className="flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-[#d9fb06] flex items-center justify-center text-[#1a1c1b] font-bold text-sm">1</span>
+                <span className="text-white">compili un questionario guidato</span>
               </div>
-            ))}
+              <div className="flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-[#d9fb06] flex items-center justify-center text-[#1a1c1b] font-bold text-sm">2</span>
+                <span className="text-white">analizziamo la tua situazione</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-[#d9fb06] flex items-center justify-center text-[#1a1c1b] font-bold text-sm">3</span>
+                <span className="text-white">ricevi un report chiaro via email</span>
+              </div>
+            </div>
+            <p className="text-white text-lg font-medium mb-10">
+              Nessun obbligo. Solo chiarezza prima di decidere.
+            </p>
+            <Link to="/valutazione" className="btn-primary text-base px-10 py-4">
+              Richiedi la valutazione gratuita
+              <ArrowRight className="ml-2" size={18} />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* SEZIONE 7 – CTA FINALE */}
       <section className="py-24 bg-[#3f4816]">
         <div className="max-w-[1400px] mx-auto px-5 md:px-10 text-center">
-          <h2 className="heading-2 text-white mb-6">Pronto a far crescere<br />il tuo business?</h2>
-          <p className="body-large text-[#888680] max-w-2xl mx-auto mb-10">
-            Richiedi una valutazione gratuita del tuo marketing. Analizzeremo la tua situazione 
-            e ti mostreremo le opportunità concrete di crescita.
+          <p className="text-white text-2xl md:text-3xl font-bold mb-4 leading-tight">
+            Il vero costo non è investire nel marketing.
           </p>
-          <Link to="/valutazione" className="btn-primary text-base px-10 py-4">
-            Richiedi valutazione gratuita
+          <p className="text-[#d9fb06] text-2xl md:text-3xl font-bold mb-10 leading-tight">
+            È continuare senza una strategia.
+          </p>
+          <Link to="/valutazione" className="btn-primary text-base px-10 py-4 bg-white text-[#1a1c1b] hover:bg-[#d9fb06]">
+            Ottieni ora la tua valutazione gratuita
             <ArrowRight className="ml-2" size={18} />
           </Link>
         </div>
