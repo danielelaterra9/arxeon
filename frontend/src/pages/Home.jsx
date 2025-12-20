@@ -112,7 +112,7 @@ const Home = () => {
               { num: '04', title: 'Ottimizzazione', desc: 'miglioriamo sulla base dei dati' },
             ].map((step, index) => (
               <div key={index} className="relative">
-                <div className="text-5xl font-black text-[#6f716d] mb-4">{step.num}</div>
+                <div className="text-5xl font-black text-[#9a9a96] mb-4">{step.num}</div>
                 <h3 className="text-white font-bold text-xl mb-2">{step.title}</h3>
                 <p className="text-[#9a9a96]">{step.desc}</p>
               </div>
