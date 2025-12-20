@@ -19,48 +19,40 @@ code {
 
 @layer base {
   :root {
-    /* Arxéon Brand Colors - Premium Dark Theme */
-    --bg-page: #1a1c1b;
-    --bg-card: #302f2c;
-    --bg-light: #dfddd6;
+    /* Arxéon Brand Colors - New Palette */
     
-    --text-primary: #d9fb06;
-    --text-secondary: #888680;
-    --text-muted: #302f2c;
-    --text-inverse: #1a1c1b;
-    --text-white: #ffffff;
+    /* BACKGROUNDS */
+    --bg-primary: #161716;      /* Hero, sezioni chiave */
+    --bg-secondary: #1f211f;    /* Sezioni intermedie */
+    --bg-surface: #2a2c29;      /* Card, box, pacchetti */
+    --bg-divider: #343633;      /* Separatori, footer */
     
-    --border-light: rgba(63, 72, 22, 0.5);
-    --border-medium: #3f4816;
-    --border-strong: #888680;
-    
-    --brand-primary: #d9fb06;
-    --brand-hover: rgba(217, 251, 6, 0.8);
-    --brand-active: rgba(217, 251, 6, 0.6);
-    
-    --secondary-olive: #3f4816;
-    --secondary-yellow: #f8d47a;
+    /* TEXTS */
+    --text-accent: #c8f000;     /* Lime smorzato - CTA, headlines */
+    --text-primary: #ffffff;    /* Testo principale */
+    --text-secondary: #9a9a96;  /* Testo secondario */
+    --text-muted: #6f716d;      /* Testo attenuato */
     
     /* Shadcn variables mapped to Arxéon */
-    --background: 100 3% 11%;
-    --foreground: 68 96% 50%;
-    --card: 40 5% 18%;
-    --card-foreground: 68 96% 50%;
-    --popover: 40 5% 18%;
+    --background: 100 3% 9%;
+    --foreground: 0 0% 100%;
+    --card: 100 4% 16%;
+    --card-foreground: 0 0% 100%;
+    --popover: 100 4% 16%;
     --popover-foreground: 0 0% 100%;
-    --primary: 68 96% 50%;
-    --primary-foreground: 100 3% 11%;
-    --secondary: 40 5% 18%;
+    --primary: 68 100% 47%;
+    --primary-foreground: 100 3% 9%;
+    --secondary: 100 4% 16%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 40 5% 18%;
-    --muted-foreground: 30 3% 52%;
-    --accent: 68 96% 50%;
-    --accent-foreground: 100 3% 11%;
+    --muted: 100 4% 16%;
+    --muted-foreground: 60 1% 60%;
+    --accent: 68 100% 47%;
+    --accent-foreground: 100 3% 9%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 68 45% 18%;
-    --input: 68 45% 18%;
-    --ring: 68 96% 50%;
+    --border: 80 3% 20%;
+    --input: 80 3% 20%;
+    --ring: 68 100% 47%;
     --radius: 0.5rem;
   }
 }
@@ -70,7 +62,7 @@ code {
     @apply border-border;
   }
   body {
-    @apply bg-[#1a1c1b] text-white;
+    @apply bg-[#161716] text-white;
   }
 }
 
@@ -80,16 +72,16 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1c1b;
+  background: #161716;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3f4816;
+  background: #343633;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d9fb06;
+  background: #c8f000;
 }
 
 /* Smooth scroll */
@@ -99,6 +91,6 @@ html {
 
 /* Selection color */
 ::selection {
-  background: rgba(217, 251, 6, 0.3);
-  color: #d9fb06;
+  background: rgba(200, 240, 0, 0.3);
+  color: #c8f000;
 }
