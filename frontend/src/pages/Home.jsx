@@ -15,8 +15,8 @@ const Home = () => {
               <span className="text-white">non il contrario.</span>
             </h1>
             <p className="text-[#9a9a96] text-lg md:text-xl leading-relaxed max-w-2xl mb-10">
-              Progettiamo e gestiamo servizi marketing chiari, misurabili e orientati ai risultati, 
-              per professionisti e aziende che vogliono smettere di improvvisare.
+              Servizi marketing strutturati, dalla consulenza strategica alla gestione operativa, 
+              per professionisti e aziende che vogliono chiarezza, controllo e risultati misurabili.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start">
               <Link to="/valutazione" className="btn-primary text-base px-8 py-4">
@@ -65,7 +65,7 @@ const Home = () => {
               </li>
             </ul>
             <p className="text-white text-xl font-medium">
-              Il risultato è sempre lo stesso: confusione, spreco e frustrazione.
+              Il problema non è fare marketing, ma farlo senza una direzione chiara o senza sapere cosa aspettarsi.
             </p>
           </div>
         </div>
@@ -89,9 +89,22 @@ const Home = () => {
               <p className="text-[#9a9a96] text-lg leading-relaxed">
                 Ogni progetto parte da un principio semplice:
               </p>
-              <p className="text-[#c8f000] text-xl font-semibold leading-relaxed">
+              <p className="text-[#c8f000] text-xl font-semibold leading-relaxed mb-8">
                 il marketing deve aiutare il business a prendere decisioni migliori.
               </p>
+              <div className="bg-[#2a2c29] p-6 rounded-xl border border-[#343633]">
+                <p className="text-white font-medium mb-4">Arxéon lavora su due livelli:</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#c8f000] mt-2.5 flex-shrink-0"></span>
+                    <span className="text-[#9a9a96]">supporto strategico per chi vuole restare autonomo</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#c8f000] mt-2.5 flex-shrink-0"></span>
+                    <span className="text-[#9a9a96]">gestione operativa per chi desidera delegare in modo controllato</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -104,12 +117,12 @@ const Home = () => {
             Un metodo chiaro,<br />
             applicato a ogni progetto.
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             {[
-              { num: '01', title: 'Analisi', desc: 'capiamo cosa funziona e cosa no' },
-              { num: '02', title: 'Strategia', desc: 'definiamo obiettivi realistici' },
-              { num: '03', title: 'Attivazione', desc: 'mettiamo in funzione i servizi giusti' },
-              { num: '04', title: 'Ottimizzazione', desc: 'miglioriamo sulla base dei dati' },
+              { num: '01', title: 'Analisi', desc: 'Capire cosa funziona e cosa no' },
+              { num: '02', title: 'Direzione strategica', desc: 'Definire priorità realistiche' },
+              { num: '03', title: 'Gestione o supporto', desc: 'In base al pacchetto scelto' },
+              { num: '04', title: 'Ottimizzazione', desc: 'Solo dove previsto dal pacchetto' },
             ].map((step, index) => (
               <div key={index} className="relative">
                 <div className="text-5xl font-black text-[#9a9a96] mb-4">{step.num}</div>
@@ -118,6 +131,9 @@ const Home = () => {
               </div>
             ))}
           </div>
+          <p className="text-[#6f716d] text-sm italic">
+            Il livello di intervento dipende dal pacchetto scelto.
+          </p>
         </div>
       </section>
 
@@ -131,22 +147,26 @@ const Home = () => {
             <p className="text-white text-2xl md:text-3xl font-bold mb-6">
               far funzionare il marketing.
             </p>
-            <p className="text-[#9a9a96] text-lg">
-              Ogni pacchetto è pensato per una fase diversa del business.
+            <p className="text-[#9a9a96] text-lg max-w-2xl mx-auto">
+              La differenza tra i pacchetti non è cosa facciamo,<br />
+              ma quanto profondamente entriamo nel tuo marketing.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-[#2a2c29] p-8 rounded-xl border border-[#343633] hover:border-[#c8f000] transition-colors">
-              <div className="text-[#c8f000] font-bold text-2xl mb-4">Basic</div>
-              <p className="text-[#9a9a96]">per mettere ordine e basi solide</p>
+              <div className="text-[#c8f000] font-bold text-2xl mb-2">Basic</div>
+              <p className="text-[#6f716d] text-sm uppercase tracking-wider mb-4">Solo consulenza strategica</p>
+              <p className="text-[#9a9a96]">Per chi vuole restare autonomo con una guida esterna</p>
             </div>
             <div className="bg-[#2a2c29] p-8 rounded-xl border border-[#c8f000]">
-              <div className="text-[#c8f000] font-bold text-2xl mb-4">Premium</div>
-              <p className="text-[#9a9a96]">per continuità e risultati nel tempo</p>
+              <div className="text-[#c8f000] font-bold text-2xl mb-2">Premium</div>
+              <p className="text-[#6f716d] text-sm uppercase tracking-wider mb-4">Gestione operativa di un singolo ambito</p>
+              <p className="text-[#9a9a96]">Per chi vuole delegare un canale specifico</p>
             </div>
             <div className="bg-[#2a2c29] p-8 rounded-xl border border-[#343633] hover:border-[#c8f000] transition-colors">
-              <div className="text-[#c8f000] font-bold text-2xl mb-4">Gold</div>
-              <p className="text-[#9a9a96]">per controllo, strategia e visione</p>
+              <div className="text-[#c8f000] font-bold text-2xl mb-2">Gold</div>
+              <p className="text-[#6f716d] text-sm uppercase tracking-wider mb-4">Collaborazione marketing completa</p>
+              <p className="text-[#9a9a96]">Per chi vuole un collaboratore dedicato</p>
             </div>
           </div>
           <div className="text-center">
@@ -183,8 +203,9 @@ const Home = () => {
                 <span className="text-white">ricevi un report chiaro via email</span>
               </div>
             </div>
-            <p className="text-white text-lg font-medium mb-10">
-              Nessun obbligo. Solo chiarezza prima di decidere.
+            <p className="text-[#9a9a96] text-base mb-10 max-w-2xl mx-auto">
+              La valutazione gratuita serve a capire se e come possiamo lavorare insieme. 
+              Non è una consulenza generica e non comporta alcun obbligo.
             </p>
             <Link to="/valutazione" className="btn-primary text-base px-10 py-4">
               Richiedi la valutazione gratuita
