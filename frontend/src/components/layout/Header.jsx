@@ -11,6 +11,7 @@ const Header = () => {
     { name: 'Servizi', path: '/servizi' },
     { name: 'Valutazione gratuita', path: '/valutazione' },
     { name: 'Metodo', path: '/metodo' },
+    { name: 'Elite', path: '/elite' },
     { name: 'Contatti', path: '/contatti' },
   ];
 
@@ -54,8 +55,9 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-white hover:text-[#c8f000] transition-colors"
+           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 text-white hover:text-[#c8f000]'
+                    transition-colors"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -81,9 +83,9 @@ const Header = () => {
               </Link>
             ))}
             <Link
-              to="/valutazione"
-              onClick={() => setMobileMenuOpen(false)}
-              className="btn-primary mt-4 text-center"
+               to="/valutazione"
+               onClick={() => setMobileMenuOpen(false)}
+               className="btn-primary mt-4 text-center"
             >
               Valutazione Gratuita
             </Link>
